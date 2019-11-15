@@ -17,13 +17,13 @@ eQ3_h = 7.15;
 interface_h = 1;
 
 RAV_h = 13.5;
-//translate([0,0,7.15 + 1/2]) cylinder(d=25,h=1,center=true);
+
 module eQ3 (side_cut=0.2) {
     translate([0,0,eQ3_h/2]) rotate([180,0,0]) difference() {
         cylinder(d=37.6, h=eQ3_h, center=true);
         cylinder(d=28, h=eQ3_h+1, center=true);
         translate([0,0,12]) sphere(d=36);
-        translate([0,0,-2]) cylinder(d=32.5, h=4.05, center=true);
+        translate([0,0,-2.4]) cylinder(d=31.5, h=4.05, center=true);
         translate([0,10,0]) cube([side_cut,20,20], center=true);
     }
 }
