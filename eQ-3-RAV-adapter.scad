@@ -54,8 +54,8 @@ module RAV(side_cut=0.2) {
             cylinder(d=34, h=15, center=true);
             
             for (i=[0:60:180]) {
-                translate([0,0,4]) rotate([90,0,i]) cylinder(d=3.5, h=40, center=true);
-                rotate(i) translate([0,0,-6]) cube([3.5,40,20],center=true);
+                translate([0,0,2.5]) rotate([90,0,i]) cylinder(d=3.5, h=40, center=true);
+                rotate(i) translate([0,0,-7.5]) cube([3.5,40,20],center=true);
             }
             
             translate([0,10,10]) cube([side_cut,20,20], center=true);
