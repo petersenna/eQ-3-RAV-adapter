@@ -69,10 +69,12 @@ module RAV(side_cut=0.2) {
             }
         }
 
-        translate([12.25,-12.25,4.75]) RAV_vane();
-        translate([-12.25,12.25,4.75]) rotate(180) RAV_vane();
+        rotate (45) {
+            translate([12.25,-12.25,4.75]) RAV_vane();
+            translate([-12.25,12.25,4.75]) rotate(180) RAV_vane();
+        }
 
-        translate([0,0,1]) difference() {
+        translate([0,0,2]) difference() {
             rotate_extrude(convexity = 10)
                 translate([19.2, 0, 0])
                     circle(r = 3, $fn = 24);
