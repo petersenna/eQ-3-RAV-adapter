@@ -31,12 +31,10 @@ module eQ3 (side_cut=0.2) {
 module interface (side_cut=0.2) {
     translate([0,0,eQ3_h + interface_h/2]) rotate([180,0,0]) difference() {
         cylinder(d=37.6, h=interface_h, center=true);
-        cylinder(d=22, h=interface_h+1, center=true);
-        translate([-7,-7,0]) cylinder(d=7, h=2, center=true);
-        translate([7,7,0]) cylinder(d=7, h=2, center=true);
-        translate([-7,7,0]) cylinder(d=7, h=2, center=true);
-        translate([7,-7,0]) cylinder(d=7, h=2, center=true);
+        cylinder(d=21, h=interface_h+1, center=true);
         translate([0,10,0]) cube([side_cut,20,20], center=true);
+        for (i=[0:60:180])
+            rotate(i) translate([0,0,-7.5]) cube([3.5,30.75,20],center=true);
     }
 }
 
