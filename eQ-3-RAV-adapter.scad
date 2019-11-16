@@ -83,7 +83,7 @@ module RAV(side_cut=0.2) {
             for (i=[0:60:180])
                 rotate(i) translate([0,0,-6]) cube([3.5,40,20],center=true);
         }
-        dent_h = 0.5;
+        dent_h = 0.75;
         translate([0,0,(RAV_h+dent_h)/-2]) difference() {
             cylinder(d2=36.6, d1=37.6, h=dent_h, center=true);
             cylinder(d=34, h=1, center=true);
