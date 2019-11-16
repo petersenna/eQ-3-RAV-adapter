@@ -23,7 +23,7 @@ module eQ3 (side_cut=0.2) {
         cylinder(d=37.6, h=eQ3_h, center=true);
         cylinder(d=27, h=eQ3_h+1, center=true);
         translate([0,0,12]) sphere(d=36);
-        translate([0,0,-2.1]) cylinder(d=29.5, h=4.05, center=true);
+        translate([0,0,-2.25]) cylinder(d=29.5, h=4.05, center=true);
         translate([0,10,0]) cube([side_cut,20,20], center=true);
     }
 }
