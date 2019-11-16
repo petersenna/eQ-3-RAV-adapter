@@ -21,7 +21,7 @@ RAV_h = 13.5;
 module eQ3 (side_cut=0.2) {
     translate([0,0,eQ3_h/2]) rotate([180,0,0]) difference() {
         cylinder(d=37.6, h=eQ3_h, center=true);
-        cylinder(d=28, h=eQ3_h+1, center=true);
+        cylinder(d=27, h=eQ3_h+1, center=true);
         translate([0,0,12]) sphere(d=36);
         translate([0,0,-2.1]) cylinder(d=29.5, h=4.05, center=true);
         translate([0,10,0]) cube([side_cut,20,20], center=true);
